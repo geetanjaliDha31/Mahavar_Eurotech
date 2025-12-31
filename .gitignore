@@ -1,0 +1,36 @@
+build/
+.env
+android/local.properties
+android/.gradle/
+android/gradle-wrapper.jar
+android/gradlew
+android/gradlew.bat
+android/captures/
+android/key.properties
+**/*.keystore
+**/*.jks
+.dart_tool/
+
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/docs/deployment/android#reference-the-keystore-from-the-app
+key.properties
+**/*.keystore
+**/*.jks
+
+flutter/ephemeral/
+
+# Visual Studio user-specific files.
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio build-related files.
+x64/
+x86/
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
