@@ -8,6 +8,7 @@ import 'package:mahavar_eurotech/screens/Address/add_new_address.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_place_picker_mb/google_maps_place_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class NoAddressFound extends StatefulWidget {
   final String machineId;
@@ -30,6 +31,7 @@ class _NoAddressFoundState extends State<NoAddressFound> {
   String? subLocality;
   String? address;
   Position? currentPosition;
+  String googleApiKey = dotenv.env['GOOGLE_MAPS_API_KEY']!;
 
   @override
   Widget build(BuildContext context) {
@@ -112,7 +114,7 @@ class _NoAddressFoundState extends State<NoAddressFound> {
               builder: (context) => Stack(
                 children: [
                   PlacePicker(
-                    apiKey: 'AIzaSyCWqJ7cq8ZoVTokiyTOVP8ndGF-umo6np4',
+                    apiKey: googleApiKey,
                     initialPosition: LatLng(37.77483, -122.41942),
                     resizeToAvoidBottomInset: true,
                     useCurrentLocation: true,
